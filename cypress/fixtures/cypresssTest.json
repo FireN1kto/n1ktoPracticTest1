@@ -7,5 +7,9 @@
     "password_fail": "n1kt0-js",
     "surname": "Цымбал",
     "name": "Максим",
-    "patronymic": "Вадимович"
+    "patronymic": "Вадимович",
+    "login_avtorisation": "testerInstitution",
+    "password_avtorisation": "Password1",
+    "login_avtorisation_fail": "N1kt0",
+    "password_avtorisation_fail": "QWEasd1"
 }

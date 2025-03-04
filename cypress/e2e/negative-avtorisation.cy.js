@@ -1,21 +1,25 @@
 describe('Авторизация', () => {
     it('Негативная авторизация-неавторизованный логин', () => {
-        cy.visit('https://dev.profteam.su/login');
+        cy.fixture('cypresssTest').then(data =>{
+            cy.visit('https://dev.profteam.su/login');
 
-        cy.get('.form-input--text').type('TsumbalM');
+            cy.get('.form-input--text').type(data.login_avtorisation_fail);
         
-        cy.get('.form-input--password').type('Password1');
+            cy.get('.form-input--password').type(data.password_avtorisation);
 
-        cy.get(':nth-child(3) > .button').click();
+            cy.get(':nth-child(3) > .button').click();
+        })
     });
 
     it('Негативная авторизация-несуществующий пароль', () => {
-        cy.visit('https://dev.profteam.su/login');
+        cy.fixture('cypresssTest').then(data =>{
+            cy.visit('https://dev.profteam.su/login');
 
-        cy.get('.form-input--text').type('testerStudent');
+            cy.get('.form-input--text').type(data.login_avtorisation);
         
-        cy.get('.form-input--password').type('QWEasd123');
+            cy.get('.form-input--password').type(data.password_avtorisation_fail);
 
-        cy.get(':nth-child(3) > .button').click();
+            cy.get(':nth-child(3) > .button').click();
+        })
     });
 })
