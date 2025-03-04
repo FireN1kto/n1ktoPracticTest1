@@ -1,5 +1,5 @@
-describe('Поиск стажировок', () => {
-    it('Поиск', () => {
+describe('Отклик на стажировку', () => {
+    it('Отклик', () => {
         cy.fixture('cypresssTest').then(data =>{
             cy.visit('https://dev.profteam.su/login')
 
